@@ -1,0 +1,38 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Vulnerability Check</title>
+<h1> XSS Check </h1>
+</head>
+<body>
+
+<div class="col-md-12">
+	<!-- <img src="/images/theme.jpg" /> -->
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" id="uID"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" name="password" id= "pass"></td>
+			</tr>
+			<tr>
+				<td><button type="submit" value="sub" id="loginId" onClick="loginClick()"> Login </button></td>
+			</tr>
+				
+		</table>
+	
+</div>
+
+<script>
+	 function loginClick()
+                {
+				   document.write(document.getElementById('uID').value);
+           		   //document.getElementById("loginId").textContent =  document.getElementById('uID').value;
+                 }
+ 
+</script>
+</body>
+</html>
